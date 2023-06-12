@@ -6,7 +6,7 @@
 
 ## Робота з API
 
-Для роботи з закритими ресурсами потрібно авторизуватися та отримати токен:
+#### Для роботи з закритими ресурсами потрібно авторизуватися та отримати токен:
 ```curl 
 POST    /api/login
 // form-data 
@@ -25,9 +25,9 @@ Output
 
 ### Доступні маршрути
 
-```curl 
-// Список всіх відгуків
+#### Список всіх відгуків
 
+```curl 
 GET 	/api/reviews
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
@@ -42,9 +42,9 @@ GET 	/api/reviews
         сomplaint
 ```
 
-```curl
-// Створення відгука
+#### Створення відгука
 
+```curl
 POST 	/api/reviews
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
@@ -60,16 +60,15 @@ POST 	/api/reviews
     thumbnail (file, jpg or png) Any image
 
 ```
-
+#### Перегляд відгука
 ```curl
-// Перегляд відгука
 GET 	/api/reviews/3
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
 ```
 
+#### Оновлення відгука
 ```curl
-// Оновлення відгука
 POST 	/api/reviews/3
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
@@ -85,24 +84,22 @@ POST 	/api/reviews/3
     thumbnail (file, jpg or png) Any image
 ```
 
+#### Видалення відгука
 ```curl
-// Видалення відгука
 DELETE 	/api/reviews/3
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
 ```
 
+#### Інформація про користувача
 ```curl 
-// Інформація про користувача
-
 GET    /api/user
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
 ```
 
+#### Деактивація токена і вихід з аккаунту
 ```curl 
-// Деактивація токена і вихід з аккаунту
-
 POST    /api/logout
 // Auth Headers
     Bearer Token = // токен який ви отримали при авторизації
